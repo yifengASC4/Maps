@@ -8,16 +8,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    
     <title>DRIVESAVE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/full.css" rel="stylesheet">
+    <link href="css/About.css" rel="stylesheet">
+
     <style>
-        #map {
+         #map {
             height: 100%;
         }
         html, body {
@@ -26,28 +26,38 @@
             padding: 0;
         }
         #floating-panel {
-        position: absolute;
-        top: 55px;
-        right: 0;
-        z-index: 5;
-        background-color: steelblue;
-        padding: 51x;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Oswald', sans-serif;
-        line-height: 10px;
-        padding-left: 2px;
+            position: absolute;
+            top: 55px;
+            right: 0;
+            z-index: 5;
+            background-color: steelblue;
+            padding: 51x;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            line-height: 10px;
+            text-align: center;
+            padding-left: 2px;
+        }
+        body{
+                color: black;
+        }
+        .navbar-brand{
+            font-Size: 30px;
+            margin: 0;
+            padding: 0;
+            color: white;
+            line-height: 0;
+            font-family: 'Oswald', sans-serif;
         }
         #submit{
             margin-right: 3px;
             height: 23px;
             background-color: aquamarine;
         }
-        image{
-            width: 10px;
-        }
-    </style>
-</head>
+        </style>
+
+    </head>
 
 <body>
 
@@ -83,7 +93,7 @@
         var map, infoWindow;
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 17,
+                zoom: 16,
                 center: {lat: 40.73059628255506, lng: -73.99152517318726},
                 mapTypeId: 'terrain'
             });
@@ -150,14 +160,12 @@
             infoWindow.open(map);
         }
     </script>
-    <!-- Page Content -->
-    <!--<img class="map"src="https://erinlyyc.com/wp-content/uploads/2017/05/google-maps.jpg"></img>-->
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE&callback=initMap" type="text/javascript"></script>
-    
 </body>
 
 </html>
