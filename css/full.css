@@ -18,6 +18,17 @@ body {
     line-height: 0;
     font-family: 'Sedgwick Ave Display', cursive;
 }
-a{
-    color: goldenrod;
+.nav-item{
+    color: white;
+}
+.logo{
+    color: white;
+    font-size: 40px;
+}
+font{
+    color: white;
+}
+.map{
+    width: 100vw;
+    height: 100vh;
 }
