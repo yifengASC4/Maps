@@ -1,141 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <style>
+            html{
+                background: url("https://cdn.allwallpaper.in/wallpapers/1440x960/11597/cityscapes-night-lights-urban-buildings-skyscrapers-1440x960-wallpaper.jpg") ;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: auto;
+            }
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            .logo{
+                position: relative;
+                left: 33%;
+                margin: 10% auto 0 auto;
+            }
+                /* Set a style for all buttons */
+            .login {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                position: relative;
+            }
+            .loginBtn{
+                position: relative;
+                left: 89%;
+                top: 10%;
+                width: 150px;
+                height: 50px;
+                background-color: steelblue;
+                font-family: 'Oswald', sans-serif;
+                color: black;
+                font-size: 30px;
+            }
+            .signupBtn{
+                position: relative;
+                left: 89%;
+                top: 15%;
+                width: 150px;
+                height: 50px;
+                background-color: steelblue;
+                font-family: 'Oswald', sans-serif;
+                color: black;
+                font-size: 30px;
+            }
+            .continue{
+                margin-top: 3%;
+                position: relative;
+                left: 42%;
+                top: 85%;
+                width: 250px;
+                height: 50px;
+                background-color: steelblue;
+                font-family: 'Oswald', sans-serif;
+                color: black;
+                font-size: 30px;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
 
-<head>
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE" type="text/javascript"></script>
-    <script src="init.js"></script>
-    <!--<script src="location.js"></script>-->
-    <script src="directions.js"></script>
+            /* Center the image and position the close button */
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+            }
 
-    <title>DRIVESAVE</title>
+            img.avatar {
+                width: 40%;
+                border-radius: 50%;
+            }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+            .container {
+                padding: 16px;
+            }
 
-    <!-- Custom styles for this template -->
-    <link href="css/full.css" rel="stylesheet">
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
 
-    <style>
-        #map {
-            height: 100%;
-        }
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: auto; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                padding-top: 60px;
+            }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 1% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 3px solid #888;
+                width: 60%; /* Could be more or less, depending on screen size */
+            }
 
-        #floating-panel {
-            position: absolute;
-            top: 55px;
-            right: 0;
-            z-index: 5;
-            background-color: steelblue;
-            padding: 51x;
-            border: 1px solid #999;
-            text-align: center;
-            font-family: 'Oswald', sans-serif;
-            line-height: 10px;
-            text-align: center;
-            padding-left: 2px;
-        }
+            /* The Close Button (x) */
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
 
-        body {
-            color: black;
-        }
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
 
-        .navbar-brand {
-            font-Size: 30px;
-            margin: 0;
-            padding: 0;
-            color: white;
-            line-height: 0;
-            font-family: 'Oswald', sans-serif;
-        }
+            /* Add Zoom Animation */
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
 
-        #submit {
-            margin-right: 3px;
-            height: 23px;
-            background-color: aquamarine;
-        }
+            @-webkit-keyframes animatezoom {
+                from {-webkit-transform: scale(0)} 
+                to {-webkit-transform: scale(1)}
+            }
+    
+            @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }   
 
-        #submit1 {
-            margin-right: 3px;
-            height: 30px;
-            background-color: aquamarine;
-        }
-
-        #floating-panel2 {
-            position: absolute;
-            top: 55px;
-            left: 1%;
-            z-index: 5;
-            background-color: #fff;
-            border: 1px solid #999;
-            text-align: center;
-            font-family: 'Roboto', 'sans-serif';
-            font-size: 15px;
-            line-height: 30px;
-            height: 29px;
-        }
-        #direction{
-            font-size: 20px;
-            line-height: 4.5px;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a id="logo" class="navbar-brand">JJNY</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">MAP <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="sample.html">QUIZ <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">ABOUT <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="contact.html">CONTACT <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                display: block;
+                float: none;
+                }
+                .cancelbtn {
+                width: 100%;
+                }
+                html{
+                    background: url("http://he.bcdn.biz/Images/2014/10/5/04221494-c72b-4efb-bada-bf4fbcc15763.jpg");
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: auto;
+                }
+                .logo{
+                    float: left;
+                    margin: 10% auto 0 auto;
+                }
+            }
+        </style>
+        <title>DRIVESAVE</title>
+    </head>
+    <body>
+        <div>
+            <button class="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
         </div>
-    </nav>
-    <div id="map"></div>
-    <div id="floating-panel">
-        <!--<input id="address" type="textbox">-->
-        <input id="submit" type="button" value="Locate" onClick="window.location.href='map.html'">
-    </div>
-    <div id="floating-panel2">
-      <button><a id="direction" class="nav-link" href="direction.html">Directions </a></buttin>
-    </div>
+        <div>   
+            <button class="signupBtn" onClick="window.location.href='signup.html'">Sign Up</buton>
+        </div>
+        <img class="logo" src="https://files.slack.com/files-tmb/T611T99PC-F6NMVA96F-340ac363b6/jjny_logo_480.png">
+        <div>   
+            <button class="continue" onClick="window.location.href='index.html'">Continue to our page</button>
+        </div>
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Avatar" class="avatar">
+                </div>
 
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE&callback=initMap" type="text/javascript"></script>
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                    <button class="login" type="submit" onClick="window.location.href='index.html'">Login</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
 
-</body>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
 
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
 </html>

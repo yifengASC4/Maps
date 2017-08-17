@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE" type="text/javascript"></script>
+    <script src="init.js"></script>
+    <!--<script src="location.js"></script>-->
+    <script src="directions.js"></script>
+
+    <title>DRIVESAVE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/full.css" rel="stylesheet">
+
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #floating-panel {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            z-index: 5;
+            background-color: steelblue;
+            padding: 51x;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            line-height: 10px;
+            text-align: center;
+            padding-left: 2px;
+        }
+
+        body {
+            color: black;
+        }
+
+        .navbar-brand {
+            font-Size: 30px;
+            margin: 0;
+            padding: 0;
+            color: white;
+            line-height: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #submit {
+            margin-right: 3px;
+            height: 23px;
+            background-color: aquamarine;
+        }
+
+        #submit1 {
+            margin-right: 3px;
+            height: 30px;
+            background-color: aquamarine;
+        }
+
+        #floating-panel2 {
+            position: absolute;
+            top: 55px;
+            left: 1%;
+            z-index: 5;
+            background-color: #fff;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto', 'sans-serif';
+            font-size: 15px;
+            line-height: 30px;
+            height: 29px;
+        }
+        #direction{
+            font-size: 20px;
+            line-height: 4.5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a id="logo" class="navbar-brand">JJNY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">MAP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="sample.html">QUIZ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.html">ABOUT <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">CONTACT <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="map"></div>
+    <div id="floating-panel">
+        <!--<input id="address" type="textbox">-->
+        <input id="submit" type="button" value="Locate" onClick="window.location.href='map.html'">
+    </div>
+    <div id="floating-panel2">
+      <button><a id="direction" class="nav-link" href="direction.html">Directions </a></buttin>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE&callback=initMap" type="text/javascript"></script>
+
+</body>
+
+</html>
