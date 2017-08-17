@@ -14,13 +14,21 @@
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/About.css" rel="stylesheet">
+    <link href="css/full.css" rel="stylesheet">
 
-<style>
-        html, body {
+    <style>
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+        
+        }
+        .input-group{
+            position: relative;
+            left: 110%;
         }
         #floating-panel {
             position: absolute;
@@ -36,10 +44,12 @@
             text-align: center;
             padding-left: 2px;
         }
-        body{
-                color: black;
+
+        body {
+            color: black;
         }
-        .navbar-brand{
+
+        .navbar-brand {
             font-Size: 30px;
             margin: 0;
             padding: 0;
@@ -47,21 +57,38 @@
             line-height: 0;
             font-family: 'Oswald', sans-serif;
         }
-        a{
+
+        a {
             color: goldenrod;
+            font-family: 'Oswald', sans-serif;
         }
-        h2{
+
+        h2 {
             text-align: center;
+            font-family: 'Oswald', sans-serif;
         }
-        h3{
+
+        h3 {
             text-align: center;
+            font-family: 'Oswald', sans-serif;
         }
-        h4{
+
+        h4 {
             text-align: center;
+            font-family: 'Oswald', sans-serif;
+        
         }
-        hr{
+
+        hr {
             clear: both;
             visibility: hidden;
+            font-family: 'Oswald', sans-serif;
+        
+        }
+        button{
+            margin-left: 145%;
+            width: 100px;
+            font-family: 'Oswald', sans-serif;
         }
     </style>
 
@@ -72,7 +99,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a id="logo" class="navbar-brand">JJNY</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -81,7 +109,7 @@
                     <a class="nav-link" href="index.html">MAP <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quiz.html">QUIZ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="sample.html">QUIZ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="about.html">ABOUT <span class="sr-only">(current)</span></a>
@@ -96,92 +124,92 @@
     <h1>J</h1>
     <div class="container">
 
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-<fieldset>
+        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+            <fieldset>
 
-<!-- Form Name -->
-<legend>Contact Us Today!</legend>
+                <!-- Form Name -->
+                <legend>Contact Us Today!</legend>
 
-<!-- Text input-->
+                <!-- Text input-->
 
-<div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
+                <!-- Text input-->
 
-<div class="form-group">
-  <label class="col-md-4 control-label" >Last Name</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
-       <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
 
 
-<!-- Text input-->
-       
-<div class="form-group">
-  <label class="col-md-4 control-label">Phone #</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-    </div>
-  </div>
-</div>
+                <!-- Text input-->
 
-<!-- Text input-->
-      
-<div class="form-group">
-  <label class="col-md-4 control-label">Address</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="address" placeholder="Address" class="form-control" type="text">
-    </div>
-  </div>
-</div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
- 
-<div class="form-group">
-  <label class="col-md-4 control-label">City</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="city" placeholder="city" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
+                <!-- Text input-->
 
-<!-- Select Basic -->
-   
-<div class="form-group"> 
-  <label class="col-md-4 control-label">State</label>
-    <div class="col-md-4 selectContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="state" class="form-control selectpicker" >
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="address" placeholder="Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="city" placeholder="city" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">State</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="state" class="form-control selectpicker">
       <option value=" " >Please select your state</option>
       <option>Alabama</option>
       <option>Alaska</option>
@@ -235,51 +263,52 @@
       <option>Wisconsin</option>
       <option >Wyoming</option>
     </select>
-  </div>
-</div>
-</div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
+                <!-- Text input-->
 
-<div class="form-group">
-  <label class="col-md-4 control-label">Zip Code</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Zip Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="zip" placeholder="Zip Code" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text area -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Feedback</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
     </div>
-</div>
-</div>
+    </div>
+    <!-- /.container -->
 
-
-<!-- Text area -->
-  
-<div class="form-group">
-  <label class="col-md-4 control-label">Feedback</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Message"></textarea>
-  </div>
-  </div>
-</div>
-
-<!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-  </div>
-</div>
-
-</fieldset>
-</form>
-</div>
-    </div><!-- /.container -->
-    
 
 
     <!-- Bootstrap core JavaScript -->

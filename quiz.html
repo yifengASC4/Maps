@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QUIZ</title>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="http://www.hungrypiranha.org/downloads/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE" type="text/javascript"></script>
+    <script src="quiz.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    
+
     <title>DRIVESAVE</title>
 
     <!-- Bootstrap core CSS -->
@@ -24,13 +27,16 @@
         #map {
             height: 100%;
         }
-        html, body {
+
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
             text-align: center;
             font-family: 'Oswald', sans-serif;
         }
+
         #floating-panel {
             position: absolute;
             top: 55px;
@@ -44,49 +50,69 @@
             line-height: 10px;
             padding-left: 2px;
         }
-        #submit{
+
+        #submit {
             margin-right: 3px;
             height: 23px;
             background-color: aquamarine;
         }
-        image{
+
+        image {
             width: 10px;
         }
-        .answers li { 
-            list-style: upper-alpha; 
-        } 
-        label { 
-            margin-left: 0.5em; 
-            cursor: pointer; 
-        } 
-        p{
+
+        .answers li {
+            list-style: upper-alpha;
+        }
+
+        label {
+            margin-left: 0.5em;
+            cursor: pointer;
+        }
+
+        p {
             font-size: 28px;
         }
-        #results { 
-            background: #dddada; 
-            color: 000000; 
-            padding: 3px; 
-            text-align: center; 
-            width: 200px; 
-            cursor: pointer; 
-            border: 1px solid gray; 
+
+        #results {
+            background: #dddada;
+            color: 000000;
+            padding: 3px;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+            border: 1px solid gray;
         }
-        #results:hover { 
-            background: #3d91b8; 
-            color: #ffffff; 
-            padding: 3px; 
-            text-align: center; 
-            width: 200px; 
-            cursor: pointer; 
-            border: 1px solid gray; 
-        } 
-        #categorylist { 
-            margin-top: 6px; 
-            display: none; 
-        } 
-        #category1, #category2, #category3, #category4, #category5, #category6, #category7, #category8, #category9, #category10, #category11 { 
-            display: none; 
+
+        #results:hover {
+            background: #3d91b8;
+            color: #ffffff;
+            padding: 3px;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+            border: 1px solid gray;
         }
+
+        #categorylist {
+            margin-top: 6px;
+            display: none;
+        }
+
+        #category1,
+        #category2,
+        #category3,
+        #category4,
+        #category5,
+        #category6,
+        #category7,
+        #category8,
+        #category9,
+        #category10,
+        #category11 {
+            display: none;
+        }
+
         #closing {
             display: none;
             font-style: italic;
@@ -119,7 +145,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a id="logo" class="navbar-brand">JJNY</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -141,118 +168,121 @@
     </nav>
     <h1>J</h1>
     <div>
-        <p class="question">1. You don't have to wear a seatbelt when you're :</p>        
-        <ul class="answers">            
-            <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">a passenger in a vehicle which was never equipped with a seatbelt.</label><br/>          
-            <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">riding in the rear seat of a passenger vehicle.</label><br/>            
-            <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">25 years of age or older.</label><br/>            
-            <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Under no circumstances may you not wear a seatbelt.</label><br/>       
-        </ul>        
-        <p class="question">2. Unless otherwise posted, what's the speed limit on an expressway in most states?</p>        
-        <ul class="answers">            
-            <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">55 mph</label><br/>           
-            <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">60 mph</label><br/>            
-            <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">65 mph</label><br/>           
-            <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">70 mph</label><br/>       
-        </ul>        
-        <p class="question">3. At what distance should you stop away from railroad tracks if a train is crossing?</p>        
-        <ul class="answers">            
-            <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">5-10 feet</label><br/>            
-            <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">15-50</label><br/>            
-            <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">50-75</label><br/>           
-            <input type="radio" name="q3" value="d" id="q3d"><label for="q3d"></label>75-100<br/>       
-        </ul>        
-        <p class="question">4. A double solid yellow line indicates:</p>        
-        <ul class="answers">           
-            <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">no passing is allowed</label><br/>            
-            <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">passing is allowed (if it is safe)</label><br/>            
-            <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">turning left here is illegal</label><br/>            
-            <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">the speed limit is no higher than 35 mph</label><br/>        
-        </ul>        
-        <p class="question">5. In general, you should signal at least how many feet before making a turn?</p>        
-        <ul class="answers">            
-            <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">25</label><br/>            
-            <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">50</label><br/>            
-            <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">75</label><br/>           
-            <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">100</label><br/>        
-        </ul>        
-        <p class="question">6. Turning right on a red light is legal when:</p>        
-        <ul class="answers">            
-            <input type="radio" name="q6" value="a" id="q6a"><label for="q6a">You are at any intersection</label><br/>            
-            <input type="radio" name="q6" value="b" id="q6b"><label for="q6b">You are at a three-way intersection</label><br/>            
-            <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">There is no "No Turn on Red" sign posted at the intersection.</label><br/>            
-            <input type="radio" name="q6" value="d" id="q6d"><label for="q6d">It is never legal to make a right turn on red.</label><br/>        
-        </ul>       
-        <p class="question">7. The center turn lane is used:</p>        
-        <ul class="answers">            
-            <input type="radio" name="q7" value="a" id="q7a"><label for="q7a">to safely pass slow moving vehicles on the left.</label><br/>            
-            <input type="radio" name="q7" value="b" id="q7b"><label for="q7b">to begin and end left turns.</label><br/>            
-            <input type="radio" name="q7" value="c" id="q7c"><label for="q7c">strictly for making U-turns.</label><br/>            
-            <input type="radio" name="q7" value="d" id="q7d"><label for="q7d">as an emergency pull-off.</label><br/>        
-        </ul>        
-        <p class="question">8. When traveling on a two-lane road in normal conditions, you should maintain a following distance of at least:</p>        
-        <ul class="answers">            
-            <input type="radio" name="q8" value="a" id="q8a"><label for="q8a">one second</label><br/>            
-            <input type="radio" name="q8" value="b" id="q8b"><label for="q8b">three seconds</label><br/>            
-            <input type="radio" name="q8" value="c" id="q8c"><label for="q8c">five seconds</label><br/>            
-            <input type="radio" name="q8" value="d" id="q8d"><label for="q8d">seven seconds</label><br/>       
-        </ul>        
-        <p class="question">9. When more than one car is stopped at an intersection, which car has the right-of-way?</p>        
-        <ul class="answers">            
-            <input type="radio" name="q9" value="a" id="q9a"><label for="q9a">The first car to arrive at the intersection.</label><br/>            
-            <input type="radio" name="q9" value="b" id="q9b"><label for="q9b">Any car making a right turn.</label><br/>            
-            <input type="radio" name="q9" value="c" id="q9c"><label for="q9c">Any car going straight through the intersection.</label><br/>            
-            <input type="radio" name="q9" value="d" id="q9d"><label for="q9d">Any car making a left turn.</label><br/>        
-        </ul>        
-        <p class="question">10. While one car signals to enter an expressway, another car signals to exit using the same weave lane. Which car has the right-of-way?</p>        
-        <ul class="answers">           
-            <input type="radio" name="q10" value="a" id="q10a"><label for="q10a">The car exiting the expressway.</label><br/>            
-            <input type="radio" name="q10" value="b" id="q10b"><label for="q10b">The car entering the expressway.</label><br/>            
-            <input type="radio" name="q10" value="c" id="q10c"><label for="q10c">The first car to reach the merge point.</label><br/>            
-            <input type="radio" name="q10" value="d" id="q10d"><label for="q10d">Neither car has the right of way.</label><br/>        
-        </ul>        
+        <p class="question">1. You don't have to wear a seatbelt when you're :</p>
+        <ul class="answers">
+            <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">a passenger in a vehicle which was never equipped with a seatbelt.</label><br/>
+            <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">riding in the rear seat of a passenger vehicle.</label><br/>
+            <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">25 years of age or older.</label><br/>
+            <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Under no circumstances may you not wear a seatbelt.</label><br/>
+        </ul>
+        <p class="question">2. Unless otherwise posted, what's the speed limit on an expressway in most states?</p>
+        <ul class="answers">
+            <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">55 mph</label><br/>
+            <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">60 mph</label><br/>
+            <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">65 mph</label><br/>
+            <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">70 mph</label><br/>
+        </ul>
+        <p class="question">3. At what distance should you stop away from railroad tracks if a train is crossing?</p>
+        <ul class="answers">
+            <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">5-10 feet</label><br/>
+            <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">15-50</label><br/>
+            <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">50-75</label><br/>
+            <input type="radio" name="q3" value="d" id="q3d"><label for="q3d"></label>75-100<br/>
+        </ul>
+        <p class="question">4. A double solid yellow line indicates:</p>
+        <ul class="answers">
+            <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">no passing is allowed</label><br/>
+            <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">passing is allowed (if it is safe)</label><br/>
+            <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">turning left here is illegal</label><br/>
+            <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">the speed limit is no higher than 35 mph</label><br/>
+        </ul>
+        <p class="question">5. In general, you should signal at least how many feet before making a turn?</p>
+        <ul class="answers">
+            <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">25</label><br/>
+            <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">50</label><br/>
+            <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">75</label><br/>
+            <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">100</label><br/>
+        </ul>
+        <p class="question">6. Turning right on a red light is legal when:</p>
+        <ul class="answers">
+            <input type="radio" name="q6" value="a" id="q6a"><label for="q6a">You are at any intersection</label><br/>
+            <input type="radio" name="q6" value="b" id="q6b"><label for="q6b">You are at a three-way intersection</label><br/>
+            <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">There is no "No Turn on Red" sign posted at the intersection.</label><br/>
+            <input type="radio" name="q6" value="d" id="q6d"><label for="q6d">It is never legal to make a right turn on red.</label><br/>
+        </ul>
+        <p class="question">7. The center turn lane is used:</p>
+        <ul class="answers">
+            <input type="radio" name="q7" value="a" id="q7a"><label for="q7a">to safely pass slow moving vehicles on the left.</label><br/>
+            <input type="radio" name="q7" value="b" id="q7b"><label for="q7b">to begin and end left turns.</label><br/>
+            <input type="radio" name="q7" value="c" id="q7c"><label for="q7c">strictly for making U-turns.</label><br/>
+            <input type="radio" name="q7" value="d" id="q7d"><label for="q7d">as an emergency pull-off.</label><br/>
+        </ul>
+        <p class="question">8. When traveling on a two-lane road in normal conditions, you should maintain a following distance of at least:</p>
+        <ul class="answers">
+            <input type="radio" name="q8" value="a" id="q8a"><label for="q8a">one second</label><br/>
+            <input type="radio" name="q8" value="b" id="q8b"><label for="q8b">three seconds</label><br/>
+            <input type="radio" name="q8" value="c" id="q8c"><label for="q8c">five seconds</label><br/>
+            <input type="radio" name="q8" value="d" id="q8d"><label for="q8d">seven seconds</label><br/>
+        </ul>
+        <p class="question">9. When more than one car is stopped at an intersection, which car has the right-of-way?</p>
+        <ul class="answers">
+            <input type="radio" name="q9" value="a" id="q9a"><label for="q9a">The first car to arrive at the intersection.</label><br/>
+            <input type="radio" name="q9" value="b" id="q9b"><label for="q9b">Any car making a right turn.</label><br/>
+            <input type="radio" name="q9" value="c" id="q9c"><label for="q9c">Any car going straight through the intersection.</label><br/>
+            <input type="radio" name="q9" value="d" id="q9d"><label for="q9d">Any car making a left turn.</label><br/>
+        </ul>
+        <p class="question">10. While one car signals to enter an expressway, another car signals to exit using the same weave lane. Which car
+            has the right-of-way?</p>
+        <ul class="answers">
+            <input type="radio" name="q10" value="a" id="q10a"><label for="q10a">The car exiting the expressway.</label><br/>
+            <input type="radio" name="q10" value="b" id="q10b"><label for="q10b">The car entering the expressway.</label><br/>
+            <input type="radio" name="q10" value="c" id="q10c"><label for="q10c">The first car to reach the merge point.</label><br/>
+            <input type="radio" name="q10" value="d" id="q10d"><label for="q10d">Neither car has the right of way.</label><br/>
+        </ul>
         <br/>
-        <div id="results">            
-            Show me the answers!       
-        </div>                
-        <div id="category1">            
-            <p><strong>Question 1:</strong> The correct answer is the <strong>Answer 1</strong>.</p>        
-        </div>        
-        <div id="category2">            
-            <p><strong>Question 2:</strong> The correct answer is <strong>Answer 2</strong>.</p>        
-        </div>        
-        <div id="category3">            
-            <p><strong>Question 3:</strong> The correct answer is <strong>Answer 3</strong>.</p>        
-        </div>        
-        <div id="category4">            
-            <p><strong>Question 4:</strong> The correct answer is <strong>Answer 4</strong>.</p>        
-        </div>        
-        <div id="category5">            
-            <p><strong>Question 5:</strong> The correct answer is <strong>Answer 1</strong>.</p>        
-        </div>        
-        <div id="category6">            
-            <p><strong>Question 6:</strong> The correct answer is <strong>Answer 2</strong>.</p>        
-        </div>        
-        <div id="category7">            
-            <p><strong>Question 7:</strong> The correct answer is <strong>Answer 3</strong>.</p>        
-        </div>        
-        <div id="category8">            
-            <p><strong>Question 8:</strong> The correct answer is <strong>Answer 4</strong>.</p>        
-        </div>        
-        <div id="category9">           
-            <p><strong>Question 9:</strong> The correct answer is <strong>Answer 1</strong>.</p>        
-        </div>        
-        <div id="category10">            
-            <p><strong>Question 10:</strong> The correct answer is <strong>Answer 2</strong>.</p>        
-        </div>        
-        <div id="category11">            
-            <p>You answered them all right!</p>        
+        <div id="results">
+            Show me the answers!
         </div>
-            <script src="quiz.js"></script>
+        <div id="category1">
+            <p><strong>Question 1:</strong> The correct answer is the <strong>Answer 1</strong>.</p>
         </div>
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/popper/popper.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE&callback=initMap" type="text/javascript"></script>
-    </body>
+        <div id="category2">
+            <p><strong>Question 2:</strong> The correct answer is <strong>Answer 2</strong>.</p>
+        </div>
+        <div id="category3">
+            <p><strong>Question 3:</strong> The correct answer is <strong>Answer 3</strong>.</p>
+        </div>
+        <div id="category4">
+            <p><strong>Question 4:</strong> The correct answer is <strong>Answer 4</strong>.</p>
+        </div>
+        <div id="category5">
+            <p><strong>Question 5:</strong> The correct answer is <strong>Answer 1</strong>.</p>
+        </div>
+        <div id="category6">
+            <p><strong>Question 6:</strong> The correct answer is <strong>Answer 2</strong>.</p>
+        </div>
+        <div id="category7">
+            <p><strong>Question 7:</strong> The correct answer is <strong>Answer 3</strong>.</p>
+        </div>
+        <div id="category8">
+            <p><strong>Question 8:</strong> The correct answer is <strong>Answer 4</strong>.</p>
+        </div>
+        <div id="category9">
+            <p><strong>Question 9:</strong> The correct answer is <strong>Answer 1</strong>.</p>
+        </div>
+        <div id="category10">
+            <p><strong>Question 10:</strong> The correct answer is <strong>Answer 2</strong>.</p>
+        </div>
+        <div id="category11">
+            <p>You answered them all right!</p>
+        </div>
+
+    </div>
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsFiwAyYOLysl-glDigv6jDe9jKm6_CE&callback=initMap"-->
+        <!--type="text/javascript"></script>-->
+</body>
+
 </html>

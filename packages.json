@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "geolocation-marker",
+        "scope": null,
+        "escapedName": "geolocation-marker",
+        "name": "geolocation-marker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\ASC Guest\\Desktop\\Maps"
+    ]
+  ],
+  "_from": "geolocation-marker@latest",
+  "_id": "geolocation-marker@2.0.5",
+  "_inCache": true,
+  "_location": "/geolocation-marker",
+  "_nodeVersion": "7.7.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/geolocation-marker-2.0.5.tgz_1502281732494_0.5674204556271434"
+  },
+  "_npmUser": {
+    "name": "chadhikes",
+    "email": "chadkillingsworth@gmail.com"
+  },
+  "_npmVersion": "5.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "geolocation-marker",
+    "scope": null,
+    "escapedName": "geolocation-marker",
+    "name": "geolocation-marker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/geolocation-marker/-/geolocation-marker-2.0.5.tgz",
+  "_shasum": "ecdf001a9c043e5cf6f921f46a693d3338ce8e87",
+  "_shrinkwrap": null,
+  "_spec": "geolocation-marker",
+  "_where": "C:\\Users\\ASC Guest\\Desktop\\Maps",
+  "author": {
+    "name": "Chad Killingsworth"
+  },
+  "bugs": {
+    "url": "https://github.com/ChadKillingsworth/geolocation-marker/issues"
+  },
+  "dependencies": {},
+  "description": "A library for adding a marker which tracks a user's location for use with the Google Maps JavaScript API v3.",
+  "devDependencies": {
+    "google-closure-compiler": ">=20170626.0.0",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-BF+DhAJmcd2ZyAI5TvTgZzToxUFovdtt+Lr7FPCv+uQnv0kAdwkAi2Jr/xW62+YrV5mL1ZR0tEpJfEJ9Piqkiw==",
+    "shasum": "ecdf001a9c043e5cf6f921f46a693d3338ce8e87",
+    "tarball": "https://registry.npmjs.org/geolocation-marker/-/geolocation-marker-2.0.5.tgz"
+  },
+  "files": [
+    "src",
+    "LICENSE.txt",
+    "README.md",
+    "bower.json",
+    "geolocation-marker.js",
+    "geolocation-marker.js.map"
+  ],
+  "gitHead": "7f93e29916a444b9dd3fa0ed0848355469449e53",
+  "homepage": "https://chadkillingsworth.github.io/geolocation-marker/",
+  "keywords": [
+    "Google Maps",
+    "Geolocation",
+    "Marker"
+  ],
+  "license": "Apache-2.0",
+  "main": "geolocation-marker.js",
+  "maintainers": [
+    {
+      "name": "chadhikes",
+      "email": "chadkillingsworth@gmail.com"
+    }
+  ],
+  "name": "geolocation-marker",
+  "optionalDependencies": {},
+  "readme": "# Geolocation Marker for Google Maps API v3\n\nThis library uses geolocation to add a marker and accuracy circle to a map. The marker position is automatically updated as the user position changes.\n\n## Obtaining the Library\n\n### Direct download\nDownload the [latest release files](https://github.com/ChadKillingsworth/geolocation-marker/releases/tag/v2.0.5) directly.\n\nFor most users, all you really need is the [geolocation-marker.js](https://github.com/ChadKillingsworth/geolocation-marker/releases/download/v2.0.5/geolocation-marker.js) file.\nThis is the prebuilt source that works in all supported browsers.\n\n### npm\nThis library is published on [npm](https://www.npmjs.com/package/geolocation-marker):\n\n    npm install geolocation-marker\n\n### Bower\nThis repo no longer contains the compiled source files. To install the library using bower, use the release distributable url:\n\n    bower install https://github.com/ChadKillingsworth/geolocation-marker/releases/download/v2.0.5/geolocation-marker.tgz\n\n## Example Usage\n\n![GeolocationMarker example](https://chadkillingsworth.github.io/geolocation-marker/images/example.png)\n\nTo add the Geolocation Marker, just instantiate a new GeolocationMarker object, passing the constructor your map object:\n\n```JavaScript\nvar mapOptions = {\n  zoom: 17,\n  center: new google.maps.LatLng(-34.397, 150.644),\n  mapTypeId: google.maps.MapTypeId.ROADMAP\n};\nvar map = new google.maps.Map(document.getElementById('map_canvas'),\n    mapOptions);\nvar GeoMarker = new GeolocationMarker(map);\n```\n\n[See the example](https://chadkillingsworth.github.io/geolocation-marker/test/example.html).\n\n*Note: This library will only function in browsers supporting the W3C Geolocation API. This excludes Internet Explorer versions 8 and older.*\n\n[Reference documentation](https://chadkillingsworth.github.io/geolocation-marker/docs/reference.html)\n\n## Modules\nThe source now uses ES6 modules. It may be included in a build with an ES6 import.\n\nThe compiled source now uses a UMD pattern so that it is compatible with both AMD and commonjs\nmodules. However, the library depends on the Google Maps API. The maps api must be defined prior to the GeolocationMarker inclusion.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChadKillingsworth/geolocation-marker.git"
+  },
+  "version": "2.0.5"
+}
